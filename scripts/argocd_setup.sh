@@ -82,6 +82,6 @@ echo "Argo CD username: $green admin $(tput sgr0)"
 echo "Argo CD Password: $red $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d;) $(tput sgr0)"
 
 echo "$blue Clone Argo CD manifest conf $(tput sgr0)"
-sudo git clone https://github.com/issamelferkh/ybolles_config.git ~/p3
+sudo git clone https://github.com/aerragha/aerragha-config.git ~/p3
 sudo kubectl apply -f ~/p3/argocd_manifest/manifest.yaml -n argocd
 
